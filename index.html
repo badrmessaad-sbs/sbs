@@ -126,15 +126,19 @@ footer{
 
 @media(max-width:768px){
     header{
-        flex-direction:column;
+        flex-direction:row;
+        justify-content:space-between;
         gap:15px;
     }
 
-    nav{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
+    #navMenu{
+        display:none;
     }
+
+    .hero h2{
+        font-size:36px;
+    }
+}
 
     nav a{
         margin:10px;
@@ -142,6 +146,41 @@ footer{
 
     .hero h2{
         font-size:36px;
+    }
+}
+    .menu-toggle{
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#008CFF;
+}
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    #navMenu{
+        display:none;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#0B162C;
+        flex-direction:column;
+        text-align:center;
+        z-index:1000;
+    }
+
+    #navMenu.active{
+        display:flex;
+    }
+
+    #navMenu a{
+        padding:15px;
+        margin:0;
+        display:block;
     }
 }
 </style>
@@ -160,8 +199,11 @@ footer{
         <p>Smart Blockchain System</p>
     </div>
 </div>
+<div class="menu-toggle" onclick="toggleMenu()">
+    ☰
+</div>
 
-<nav>
+<nav id="navMenu">
     <a href="#about">About</a>
     <a href="#tokenomics">Tokenomics</a>
     <a href="#roadmap">Roadmap</a>
@@ -284,6 +326,10 @@ footer{
     <p>Secure • Fast • Limitless</p>
 
 </footer>
-
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
 </body>
 </html>
