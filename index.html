@@ -123,32 +123,7 @@ footer{
     text-align:center;
     padding:30px;
 }
-
-@media(max-width:768px){
-    header{
-        flex-direction:row;
-        justify-content:space-between;
-        gap:15px;
-    }
-
-    #navMenu{
-        display:none;
-    }
-
-    .hero h2{
-        font-size:36px;
-    }
-}
-
-    nav a{
-        margin:10px;
-    }
-
-    .hero h2{
-        font-size:36px;
-    }
-}
-    .menu-toggle{
+.menu-toggle{
     display:none;
     font-size:30px;
     cursor:pointer;
@@ -157,17 +132,38 @@ footer{
 
 @media(max-width:768px){
 
-    .menu-toggle{
-        display:block;
+    header{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        padding:10px 4%;
     }
+
     .logo p{
         display:none;
+    }
+
+    .logo img{
+        width:30px;
+    }
+
+    .logo h1{
+        font-size:18px;
+    }
+
+    .buy-btn{
+        padding:6px 10px;
+        font-size:10px;
+    }
+
+    .menu-toggle{
+        display:block;
     }
 
     #navMenu{
         display:none;
         position:absolute;
-        top:80px;
+        top:60px;
         left:0;
         width:100%;
         background:#0B162C;
@@ -185,7 +181,12 @@ footer{
         margin:0;
         display:block;
     }
+
+    .hero h2{
+        font-size:30px;
+    }
 }
+
 </style>
 
 </head>
@@ -202,17 +203,18 @@ footer{
        <p>Smart Blockchain System</p> 
     </div>
 </div>
-<div class="menu-toggle" onclick="toggleMenu()">
-    ☰
-</div>
 
 <nav id="navMenu">
     <a href="#about">About</a>
     <a href="#tokenomics">Tokenomics</a>
     <a href="#roadmap">Roadmap</a>
 </nav>
-
-<a href="#" class="buy-btn">Buy SBS</a>
+    <a href="#" class="buy-btn">Buy SBS</a>
+    
+<div class="menu-toggle"
+    onclick="toggleMenu()">
+    ☰
+</div>
 
 </header>
 
