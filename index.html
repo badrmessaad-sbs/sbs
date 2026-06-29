@@ -185,45 +185,35 @@ footer{
     .hero h2{
         font-size:30px;
     }
-<section class="partners">
-    <h2>Partners</h2>
+.partners{
+    padding:80px 0;
+    overflow:hidden;
+    text-align:center;
+}
 
-    <div class="partners-track">
+.partners-track{
+    display:flex;
+    gap:60px;
+    align-items:center;
+    animation:scroll 20s linear infinite;
+    width:max-content;
+}
 
-        <a href="https://raydium.io" target="_blank">
-            <img src="raydium.png" alt="Raydium">
-        </a>
+.partners-track img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    transition:.3s;
+}
 
-        <a href="https://jup.ag" target="_blank">
-            <img src="jupiter.png" alt="Jupiter">
-        </a>
+.partners-track img:hover{
+    transform:scale(1.15);
+}
 
-        <a href="https://dexscreener.com" target="_blank">
-            <img src="dexscreener.png" alt="DexScreener">
-        </a>
-
-        <a href="https://birdeye.so" target="_blank">
-            <img src="birdeye.png" alt="Birdeye">
-        </a>
-
-        <a href="https://phantom.app" target="_blank">
-            <img src="phantom.png" alt="Phantom">
-        </a>
-
-        <a href="https://solflare.com" target="_blank">
-            <img src="Solflare.png" alt="Solflare">
-        </a>
-
-        <a href="https://coingecko.com" target="_blank">
-            <img src="coingecko.png" alt="CoinGecko">
-        </a>
-
-        <a href="https://coinmarketcap.com" target="_blank">
-            <img src="coinmarketcap.png" alt="CoinMarketCap">
-        </a>
-
-    </div>
-</section>
+@keyframes scroll{
+    from{transform:translateX(100%);}
+    to{transform:translateX(-100%);}
+}
 }
 
 </style>
