@@ -129,6 +129,31 @@ footer{
     cursor:pointer;
     color:#008CFF;
 }
+    .partners{
+    padding:40px 0;
+    overflow:hidden;
+}
+
+.partners-track{
+    display:flex;
+    gap:35px;
+    align-items:center;
+    animation:scroll 20s linear infinite;
+    width:max-content;
+}
+
+.partners-track img{ 
+    height:70px;
+     width:auto;
+    max-width:120px;
+    object-fit:contain;
+    transition:.3s;
+}
+
+.partners-track img:hover{
+    transform:scale(1.15);
+}
+
 
 @media(max-width:768px){
 
@@ -185,30 +210,6 @@ footer{
     .hero h2{
         font-size:30px;
     }
-.partners{
-    padding:40px 0;
-    overflow:hidden;
-}
-
-.partners-track{
-    display:flex;
-    gap:35px;
-    align-items:center;
-    animation:scroll 20s linear infinite;
-    width:max-content;
-}
-
-.partners-track img{ 
-    height:70px;
-     width:auto;
-    max-width:120px;
-    object-fit:contain;
-    transition:.3s;
-}
-
-.partners-track img:hover{
-    transform:scale(1.15);
-}
 
 @keyframes scroll{
     from{transform:translateX(100%);}
